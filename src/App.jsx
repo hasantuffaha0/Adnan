@@ -1,8 +1,11 @@
-import NavItems from "./components/nav";
+import "./App.css";
+import MainNav from "./components/nav";
+import Hero from "./components/hero";
 const App = () => {
   return (
-    <div className="min-h-screen select-none bg-linear-to-br from-slate-950 via-slate-900 to-blue-950 pt-25 text-white">
-        <NavItems />
+    <div className="min-h-screen select-none gradient-bg pt-25 text-white">
+        <MainNav />
+        <Hero />
     </div>
   );
 }
