@@ -73,18 +73,14 @@ const MainNav = () => {
         <nav
             className="flex items-center border-2 border-white/30 rounded-3xl fixed w-[97%] px-5 mx-auto
             top-4 inset-x-0 bg-white/20 backdrop-blur-[10px] justify-between h-15 max-md:text-base z-1">
-
-            <img
-                src={Logo}
-                alt="Adnan Saker Logo"
-                className="w-10 h-10" />
-
-            <p
-                className="adnan-title text-3xl font-black min-[425px]:hidden">
-                Adnan Sakr
-            </p>
-
-            <NavItems />
+            <div
+                className="flex flex-row items-center gap-8">
+                <img
+                    src={Logo}
+                    alt="Adnan Saker Logo"
+                    className="w-10 h-10" />
+                <NavItems />
+            </div>
 
             <button
                 className="hire-me bg-blue-700 hover:bg-blue-900 transition-all duration-200 hover:scale-101 ease-in-out text-white
