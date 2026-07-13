@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+* {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: "AdnanNameFont";
     src: url('./Fonts/Caveat/Caveat-VariableFont_wght.ttf') format("Truetype");

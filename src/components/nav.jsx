@@ -1,12 +1,9 @@
-import { useState, Fragment, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Logo from "../assets/adnan-logo.svg";
 const navLinks = [
-    { title : 'Hero' },
-    { title : 'About', className : 'hidden sm:block' },
-    { title : 'Projects', className : 'hidden sm:block' },
-    { title : 'Achievements', className : 'sm:hidden' },
-    { title : 'Certifications', className : 'hidden sm:block' },
-    { title : 'Contact' }
+    { title : 'Home' },
+    { title : 'About' },
+    { title : 'Skills' }
 ]
 
 const Burger = () => {
@@ -28,28 +25,33 @@ const Burger = () => {
     }, []);
 
     return (
-        <div ref={menuRef} className="hidden max-[425px]:flex items-center">
-            <button onClick={() => setIsOpen(!isOpen)} className="relative w-10 h-10">
+        <div
+            ref={menuRef}
+            className="hidden max-[425px]:flex items-center">
+            <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="relative w-10 h-10">
                 <span 
-                    className={`absolute inset-0 flex items-center justify-center top-1 text-3xl transition-all duration-300
+                    className={`absolute inset-0 flex items-center justify-center text-3xl transition-all duration-300
                     ${isOpen ? "opacity-0 rotate-90 scale-75" : "opacity-100 rotate-0 scale-100"}`}>
                         ☰
                 </span>
                 <span 
-                    className={`absolute inset-0 flex items-center justify-center top-1 text-3xl transition-all duration-300
+                    className={`absolute inset-0 flex items-center justify-center text-3xl transition-all duration-300
                     ${isOpen ? "opacity-100 rotate-0 scale-100" : "opacity-0 -rotate-90 scale-75"}`}>
                         ✕
                 </span>
             </button>
             <ul
-                className={`flex flex-col gap-1 text-black font-bold p-3 bg-slate-300 rounded-3xl absolute top-17
+                className={`flex flex-col text-black font-bold p-2 bg-slate-300 rounded-3xl absolute top-17
                 right-0 w-50 shadow-lg shadow-black/50 transition-all duration-300 border-slate-700 border-2 text-base
             ${isOpen ? "opacity-100 scale-100" : "opacity-0 scale-0 pointer-events-none"}`}>
-                {navLinks.filter(link => link.title !== 'Achievements').map((link, index) => (
-                    <Fragment key={index}>
-                        <button className="burgerbutton py-2 bg-slate-300 active:bg-slate-500">{link.title}</button>
-                        {index !== navLinks.length - 2 ? <hr /> : null}
-                    </Fragment>
+                {navLinks.map((link, index) => (
+                    <button
+                        className="burgerbutton py-2 bg-slate-300 active:bg-slate-500 border-black not-last:border-b"
+                        key={index}>
+                            {link.title}
+                    </button>
                 ))}
             </ul>
         </div>
@@ -62,7 +64,7 @@ const NavItems = () => {
             className="gap-2 text-white font-black text-[15px] lg:text-lg lg:gap-5 md:text-base
             md:gap-4 sm:text-[16px] sm:gap-3 flex max-[425px]:hidden">
             {navLinks.map((link, index) => (
-                <li key = {index} className={`${link.className || ''} cursor-pointer`}>{link.title}</li>
+                <li key = {index} className={`cursor-pointer`}>{link.title}</li>
             ))}
         </ul>
     )

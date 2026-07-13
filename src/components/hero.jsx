@@ -99,7 +99,7 @@ const ShowInfo = () => {
             {Info.map((link) => (
                 <div
                     key={link.title}
-                    className="p-4 flex flex-col items-start gap-2">
+                    className="p-4 flex flex-col gap-2 flex-1">
 
                     <p
                         className="text-orange-400">
@@ -128,9 +128,9 @@ const AdnanPhoto = () => {
             ></div>
 
             <img
-            src={photo}
-            alt="Adnan Sakr Image"
-            className="w-70 sm:w-100 lg:w-130 rounded-full object-cover absolute inset-0 md:-top-19 lg:-top-33 sm:left-1 sm:-top-25 left-1 -top-17"/>
+                src={photo}
+                alt="Adnan Sakr Image"
+                className="w-70 sm:w-100 lg:w-130 rounded-full object-cover absolute inset-0 md:-top-19 lg:-top-33 sm:left-1 sm:-top-25 left-1 -top-17"/>
         </div>
     )
 }
