@@ -48,7 +48,7 @@ const Burger = () => {
             ${isOpen ? "opacity-100 scale-100" : "opacity-0 scale-0 pointer-events-none"}`}>
                 {navLinks.map((link, index) => (
                     <a
-                        href={`${link.title === "About" ? "#about" : link.title === "Home" ? "#home" : link.title === "Skills" ? "#skills" : ""}`}
+                        href={`${link.title === "About" ? "#about" : link.title === "Home" ? "#" : link.title === "Skills" ? "#skills" : ""}`}
                         className="burgerbutton py-2 bg-slate-300 active:bg-slate-500 border-black not-last:border-b text-center"
                         key={index}>
                             {link.title}
@@ -66,7 +66,7 @@ const NavItems = () => {
             md:gap-4 sm:text-[16px] sm:gap-3 flex max-[425px]:hidden">
             {navLinks.map((link, index) => (
                 <a
-                    href={`${link.title === "About" ? "#about" : link.title === "Home" ? "#home" : link.title === "Skills" ? "#skills" : ""}`}
+                    href={`${link.title === "About" ? "#about" : link.title === "Home" ? "#" : link.title === "Skills" ? "#skills" : ""}`}
                     key = {index}
                     className={`cursor-pointer hover:text-yellow-300 hover:scale-105 transition-all duration-300 ease-in-out`}>
                         {link.title}

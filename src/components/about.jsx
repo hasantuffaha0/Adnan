@@ -24,6 +24,7 @@ const DriftFeatures = [
 
 const SectionHeading = ({ children }) => (
     <p
+        data-aos="fade-down"
         className="text-3xl sm:text-4xl font-bold text-blue-400 mb-4">
             {children}
     </p>
@@ -32,6 +33,7 @@ const SectionHeading = ({ children }) => (
 const Intro = () => {
     return (
         <div
+            data-aos="fade-down"
             className="max-w-3xl">
 
             <p
@@ -69,10 +71,13 @@ const SkillsGrid = () => {
         <div
             className="mt-10">
             <p
+                data-aos="fade-down"
                 className="text-xl sm:text-2xl font-bold text-orange-400 mb-4">
                     Technical Skills
             </p>
             <div
+                
+                data-aos="fade-right"
                 className="flex flex-wrap gap-2 sm:gap-3">
                 {Skills.map((skill) => (
                     <span
@@ -92,6 +97,7 @@ const SkillsGrid = () => {
 const FeaturedProject = () => {
     return (
         <div
+            data-aos="fade-down"
             className="mt-10 bg-white/10 backdrop-blur-xl rounded-2xl p-6 sm:p-8 border-orange-400/50 border">
             <p
                 className="text-xl sm:text-2xl font-bold text-orange-400 mb-1">
@@ -127,6 +133,7 @@ const FeaturedProject = () => {
 const BeyondCode = () => {
     return (
         <div
+            data-aos="fade-right"
             className="mt-10 max-w-3xl">
             <p
                 className="text-xl sm:text-2xl font-bold text-orange-400 mb-4">Beyond Code</p>

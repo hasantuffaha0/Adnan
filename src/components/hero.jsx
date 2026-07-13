@@ -12,7 +12,8 @@ const Info = [
 const NameAdnan = () => {
     return (
         <div
-            className="flex flex-col items-start mb-7 mt-5 sm:mt-0">
+        data-aos="fade-right"
+        className="flex flex-col items-start mb-7 mt-5 sm:mt-0">
             <p
                 className="text-2xl sm:text-3xl text-blue-400">
                     Hi I am
@@ -29,6 +30,7 @@ const NameAdnan = () => {
 const Logo = () => {
     return (
         <div
+            data-aos="fade-right"
             className="flex justify-center items-center">
             <img
                 src={flutterLogo}
@@ -58,6 +60,7 @@ const Logo = () => {
 const Button = () => {
     return (
         <div
+            data-aos="zoom-in"
             className="flex flex-row gap-3 justify-center mt-0 sm:mt-5 py-4">
             <button
                 className="bg-green-500 hover:bg-green-700 active:bg-green-700 text-white font-bold py-2 px-4 w-1/3 rounded-2xl shadow-lg shadow-black/50
@@ -95,8 +98,9 @@ const Counter = ({ end }) => {
 const ShowInfo = () => {
     return (
         <div
+            data-aos="fade-right"
             className="client-info font-bold text-base md:text-l md:p-1 divide-black divide-x bg-white/10 backdrop-blur-xl text-black flex justify-evenly
-            p-2 mt-5 sm:mt-10 rounded-xl border-orange-400/50 border">
+            p-2 mt-5 sm:mt-10 mb-2 rounded-xl border-orange-400/50 border">
             {Info.map((link) => (
                 <div
                     key={link.title}
@@ -122,6 +126,7 @@ const ShowInfo = () => {
 const AdnanPhoto = () => {
     return (
         <div
+            data-aos="fade-left"
             className="relative z-0 mt-6 sm:mt-20 md:mt-0">
             <div
                 className="background-photo w-70 h-70 lg:w-120 lg:h-120 md:w-100 md:h-100 relative inset-0 rounded-full md:top-15 sm:top-0 lg:top-7 top-7

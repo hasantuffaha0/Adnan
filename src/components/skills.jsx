@@ -48,8 +48,9 @@ const SoftSkills = [
 const SkillCard = ({ title, desc, index }) => {
     return (
         <div
+            data-aos="fade-up"
             className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-5 sm:p-6 flex flex-col gap-2 
-            hover:border-orange-400/50 transition-all hover:scale-[1.01] duration-300">
+            hover:border-orange-400/50 transition-all hover:scale-[1.01] duration-800">
             <span
                 className="text-orange-400 font-bold text-sm">
                 {String(index + 1).padStart(2, "0")}
@@ -69,6 +70,7 @@ const SkillCard = ({ title, desc, index }) => {
 const MainSoftSkills = () => {
     return (
         <div
+            data-aos="fade-down"
             className="px-6 sm:px-10 md:px-12 lg:px-20 py-16 sm:py-20 border-b-4 border-slate-700 border-dashed">
             <p
                 className="text-3xl sm:text-4xl font-bold text-blue-400 mb-3">
