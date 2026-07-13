@@ -48,7 +48,8 @@ const SoftSkills = [
 const SkillCard = ({ title, desc, index }) => {
     return (
         <div
-            className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-5 sm:p-6 flex flex-col gap-2 hover:border-orange-400/50 transition-colors duration-300">
+            className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-5 sm:p-6 flex flex-col gap-2 
+            hover:border-orange-400/50 transition-all hover:scale-[1.01] duration-300">
             <span
                 className="text-orange-400 font-bold text-sm">
                 {String(index + 1).padStart(2, "0")}

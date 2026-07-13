@@ -95,8 +95,8 @@ const Counter = ({ end }) => {
 const ShowInfo = () => {
     return (
         <div
-            className="client-info font-bold text-base md:text-l md:p-1 divide-black divide-x bg-white/20 backdrop-blur-xl text-black flex justify-evenly
-            p-2 mt-5 sm:mt-10 rounded-xl border border-white">
+            className="client-info font-bold text-base md:text-l md:p-1 divide-black divide-x bg-white/10 backdrop-blur-xl text-black flex justify-evenly
+            p-2 mt-5 sm:mt-10 rounded-xl border-orange-400/50 border">
             {Info.map((link) => (
                 <div
                     key={link.title}

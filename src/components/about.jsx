@@ -38,7 +38,7 @@ const Intro = () => {
                 className="text-slate-300 leading-relaxed">
                 I'm a
                     <span 
-                        className="text-orange-400 font-semibold">
+                        className="text-orange-400 font-bold text-2xl lg:text-3xl p-2">
                         Flutter Developer
                     </span> 
                 passionate about building scalable, production-ready mobile applications with clean architecture
@@ -77,7 +77,9 @@ const SkillsGrid = () => {
                 {Skills.map((skill) => (
                     <span
                         key={skill}
-                        className="bg-white/10 backdrop-blur-md border border-white/20 text-slate-200 text-xs sm:text-sm font-medium px-3 py-1.5 sm:px-4 sm:py-2 rounded-full"
+                        className="bg-white/10 backdrop-blur-md border border-white/20 text-slate-200 text-xs sm:text-sm
+                        font-medium px-3 py-1.5 sm:px-4 sm:py-2 rounded-full hover:border-orange-400/50 transition-all duration-300 hover:scale-105
+                        hover:px-5"
                     >
                         {skill}
                     </span>
@@ -90,7 +92,7 @@ const SkillsGrid = () => {
 const FeaturedProject = () => {
     return (
         <div
-            className="mt-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 sm:p-8">
+            className="mt-10 bg-white/10 backdrop-blur-xl rounded-2xl p-6 sm:p-8 border-orange-400/50 border">
             <p
                 className="text-xl sm:text-2xl font-bold text-orange-400 mb-1">
                     Featured Project
@@ -111,7 +113,8 @@ const FeaturedProject = () => {
                 {DriftFeatures.map((feature) => (
                     <span
                         key={feature}
-                        className="bg-blue-500/10 border border-blue-400/30 text-blue-300 text-xs sm:text-sm font-medium px-3 py-1.5 rounded-full"
+                        className="bg-blue-500/10 border hover:border-orange-400/50 transition-all duration-300 hover:scale-105
+                        hover:px-5 border-blue-400/30 text-blue-300 text-xs sm:text-sm font-medium px-3 py-1.5 rounded-full"
                     >
                         {feature}
                     </span>
@@ -132,7 +135,7 @@ const BeyondCode = () => {
                 Beyond technical skills, I have strong leadership and communication abilities.
                 Throughout my university projects, I frequently took the role of{" "}
                 <span
-                    className="text-orange-400 font-semibold">
+                    className="text-orange-400 font-bold text-2xl lg:text-3xl p-2">
                     Team Leader
                 </span>
                 , helping teams organize tasks, solve challenges, and deliver projects successfully under deadlines
