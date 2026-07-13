@@ -65,11 +65,12 @@ const Button = () => {
                 Hire Me
             </button>
 
-            <button
+            <a
+                href="https://drive.usercontent.google.com/u/0/uc?id=1lmlPu5F-DZoxkoQyEvZ2omTcneNQm-PH&export=download"
                 className="bg-blue-500 hover:bg-blue-700 active:bg-blue-700 text-white font-bold py-2 px-4 w-1/2 rounded-2xl shadow-lg shadow-black/50
                 hover:scale-103 transition-all duration-300 ease-in-out cursor-pointer">
                 Download CV
-            </button>
+            </a>
         </div>
     )
 }
@@ -121,7 +122,7 @@ const ShowInfo = () => {
 const AdnanPhoto = () => {
     return (
         <div
-            className="relative z-0 sm:mt-10 md:mt-0">
+            className="relative z-0 mt-6 sm:mt-20 md:mt-0">
             <div
                 className="background-photo w-70 h-70 lg:w-120 lg:h-120 md:w-100 md:h-100 relative inset-0 rounded-full md:top-15 sm:top-0 lg:top-7 top-7
                 border border-slate-600"
@@ -138,7 +139,9 @@ const AdnanPhoto = () => {
 const Hero = () => {
   return (
     <div
-        className="flex flex-col md:flex-row items-center justify-around gap-5 text-center mt-5 md:mt-10 lg:mt-15 max-sm:px-20 md:p-4">
+        id="home"
+        className="flex flex-col md:flex-row items-center justify-around gap-5 text-center max-sm:px-20 md:p-4
+        border-b-4 border-dashed border-slate-700 min-h-[calc(100vh-95px)]">
 
         <div
             className="order-2 md:order-1">

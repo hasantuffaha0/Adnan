@@ -47,11 +47,12 @@ const Burger = () => {
                 right-0 w-50 shadow-lg shadow-black/50 transition-all duration-300 border-slate-700 border-2 text-base
             ${isOpen ? "opacity-100 scale-100" : "opacity-0 scale-0 pointer-events-none"}`}>
                 {navLinks.map((link, index) => (
-                    <button
-                        className="burgerbutton py-2 bg-slate-300 active:bg-slate-500 border-black not-last:border-b"
+                    <a
+                        href={`${link.title === "About" ? "#about" : link.title === "Home" ? "#home" : link.title === "Skills" ? "#skills" : ""}`}
+                        className="burgerbutton py-2 bg-slate-300 active:bg-slate-500 border-black not-last:border-b text-center"
                         key={index}>
                             {link.title}
-                    </button>
+                    </a>
                 ))}
             </ul>
         </div>
@@ -64,7 +65,12 @@ const NavItems = () => {
             className="gap-2 text-white font-black text-[15px] lg:text-lg lg:gap-5 md:text-base
             md:gap-4 sm:text-[16px] sm:gap-3 flex max-[425px]:hidden">
             {navLinks.map((link, index) => (
-                <li key = {index} className={`cursor-pointer`}>{link.title}</li>
+                <a
+                    href={`${link.title === "About" ? "#about" : link.title === "Home" ? "#home" : link.title === "Skills" ? "#skills" : ""}`}
+                    key = {index}
+                    className={`cursor-pointer hover:text-yellow-300 hover:scale-105 transition-all duration-300 ease-in-out`}>
+                        {link.title}
+                </a>
             ))}
         </ul>
     )
