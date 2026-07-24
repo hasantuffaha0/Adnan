@@ -7,19 +7,19 @@ import cert4 from "../assets/certificates/cert4.jpg";
 const Certificates = [
     {
         title: "Certificate 1",
-        image: cert1,
-    },
-    {
-        title: "Certificate 2",
         image: cert2,
     },
     {
-        title: "Certificate 3",
+        title: "Certificate 2",
         image: cert3,
     },
     {
-        title: "Certificate 4",
+        title: "Certificate 3",
         image: cert4,
+    },
+    {
+        title: "Certificate 4",
+        image: cert1,
     },
 ];
 
@@ -30,11 +30,11 @@ const CertCard = ({ title, image, index, onClick }) => {
             onClick={onClick}
             className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-4 sm:p-5 flex flex-col gap-3
             hover:border-orange-400/50 transition-all hover:scale-[1.01] duration-800 cursor-pointer group">
-            <div className="overflow-hidden rounded-xl border border-white/10">
+            <div className="overflow-hidden rounded-xl border border-white/10 bg-black/20 h-48 sm:h-56 md:h-64 flex items-center justify-center">
                 <img
                     src={image}
                     alt={title}
-                    className="w-full h-48 sm:h-56 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                 />
             </div>
             <div className="flex items-center gap-2">

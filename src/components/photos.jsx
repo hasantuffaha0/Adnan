@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
-// بيجيب كل الصور من كل فولدرات المشاريع تلقائياً (ما عدا الـ cover)
 const allImages = import.meta.glob("../assets/projects/*/*.*", {
     eager: true,
     import: "default",
@@ -114,22 +113,34 @@ const Photos = () => {
                     <button
                         onClick={(e) => {
                             e.stopPropagation();
+                            setSelectedIndex(null);
+                        }}
+                        className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20
+                        w-10 h-10 flex items-center justify-center rounded-full
+                        bg-white/10 border border-white/20 text-white text-xl
+                        hover:bg-red-500/30 hover:border-red-400/50 transition-all cursor-pointer">
+                        ✕
+                    </button>
+
+                    <button
+                        onClick={(e) => {
+                            e.stopPropagation();
                             showPrev();
                         }}
                         className="absolute left-3 sm:left-8 top-1/2 -translate-y-1/2 z-10
-                        w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full
-                        bg-white/10 border border-white/20 text-white text-2xl
+                        w-9 h-9 sm:w-12 sm:h-12 flex items-center justify-center rounded-full
+                        bg-white/10 border border-white/20 text-white text-xl sm:text-2xl
                         hover:bg-orange-400/30 hover:border-orange-400/50 transition-all cursor-pointer">
                         ‹
                     </button>
 
                     <div
                         onClick={(e) => e.stopPropagation()}
-                        className="max-w-md w-full flex flex-col items-center">
+                        className="max-w-xs sm:max-w-md w-full flex flex-col items-center">
                         <img
                             src={gallery[selectedIndex]}
                             alt={`${projectTitle} screenshot ${selectedIndex + 1}`}
-                            className="w-full max-h-[85vh] object-contain rounded-xl border border-white/20"
+                            className="w-full max-h-[60vh] sm:max-h-[85vh] object-contain rounded-xl border border-white/20"
                         />
                         <p className="text-slate-400 text-sm mt-4">
                             {selectedIndex + 1} / {gallery.length}
@@ -142,13 +153,13 @@ const Photos = () => {
                             showNext();
                         }}
                         className="absolute right-3 sm:right-8 top-1/2 -translate-y-1/2 z-10
-                        w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full
-                        bg-white/10 border border-white/20 text-white text-2xl
+                        w-9 h-9 sm:w-12 sm:h-12 flex items-center justify-center rounded-full
+                        bg-white/10 border border-white/20 text-white text-xl sm:text-2xl
                         hover:bg-orange-400/30 hover:border-orange-400/50 transition-all cursor-pointer">
                         ›
                     </button>
                 </div>
-            )}
+        )}
         </div>
     );
 };

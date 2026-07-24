@@ -78,11 +78,12 @@ const Button = () => {
         <div
             data-aos="zoom-in"
             className="flex flex-row flex-wrap gap-3 justify-center md:justify-start mt-8">
-            <button
+            <a
+                href="#contact"
                 className="bg-blue-700 hover:bg-blue-900 transition-all duration-200 hover:scale-105 ease-in-out text-white
                 font-bold py-3 px-7 rounded-full shadow shadow-white/20 cursor-pointer text-sm sm:text-base">
                 Hire Me
-            </button>
+            </a>
 
             <a
                 href="https://drive.usercontent.google.com/u/0/uc?id=1lmlPu5F-DZoxkoQyEvZ2omTcneNQm-PH&export=download"

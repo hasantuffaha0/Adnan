@@ -1,31 +1,51 @@
 .gradient-bg {
+  position: relative;
   background: linear-gradient(
     -45deg,
     #020617,
-    #0f172a,
-    #172554,
-    #312e81,
-    #172554
+    #0c1a3d,
+    #1e3a8a,
+    #4338ca,
+    #1e3a8a,
+    #020617
   );
-
   background-size: 400% 400%;
-  animation: gradient 8s ease infinite;
+  animation: gradient 12s ease infinite;
+  overflow: hidden;
+}
+
+.gradient-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(249, 115, 22, 0.08), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.12), transparent 45%);
+  animation: glow 15s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
 }
 
 @keyframes gradient {
   0%, 100% {
     background-position: 0% 50%;
   }
-
   25% {
-    background-position: 50% 50%;
+    background-position: 50% 100%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   75% {
-    background-position: 50% 50%;
+    background-position: 50% 0%;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-5%, 5%) scale(1.15);
   }
 }

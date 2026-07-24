@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
 
-// بيجيب كل صور "cover" من كل فولدر مشروع تلقائياً
 const covers = import.meta.glob("../assets/projects/*/cover.*", {
     eager: true,
     import: "default",
 });
 
-// دالة بتجيب مسار الـ cover بتاع مشروع معين حسب الـ slug
 const getCover = (slug) => {
     const entry = Object.entries(covers).find(([path]) =>
         path.includes(`/projects/${slug}/`)
@@ -18,19 +16,19 @@ const projectsList = [
     {
         slug: "drift-users",
         title: "drift users",
-        desc: "Description of the second project goes here.",
+        desc: "A production-oriented ride-hailing platform built with Flutter, featuring real-time trip management, live location tracking, push notifications, and seamless user-driver interactions. Designed with Clean Architecture, BLoC, and Firebase while addressing real-world challenges such as asynchronous workflows, race conditions, and scalable state management.",
         tech: ["Flutter", "Dart"],
     },
     {
         slug: "drift-drivers",
         title: "drift drivers",
-        desc: "Description of the third project goes here.",
+        desc: "A dedicated driver application developed for the Drift ecosystem, enabling drivers to manage ride requests, stream live location, update availability, and track earnings in real time. Built with Flutter, Firebase, and BLoC, focusing on reliability, real-time synchronization, and responsive user experience.",
         tech: ["Flutter", "Dart"],
     },
     {
         slug: "sakr-chat",
         title: "Sakr Chat",
-        desc: "A real-time chat application built with Flutter, featuring clean UI, smooth animations, and a focus on user experience.",
+        desc: "A modern real-time messaging platform featuring instant chat, voice and video calls, friend management, online presence tracking, and media sharing. Powered by Firebase and Agora RTC with BLoC state management, delivering a responsive and production-ready communication experience.",
         tech: ["Flutter", "Dart", "Firebase"],
     },
 ];
