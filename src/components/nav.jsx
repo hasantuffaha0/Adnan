@@ -77,10 +77,23 @@ const NavItems = () => {
 }
 
 const MainNav = () => {
+    const [isHidden, setIsHidden] = useState(false);
+
+    useEffect(() => {
+        const handleLightboxToggle = (e) => {
+            setIsHidden(e.detail.open);
+        };
+
+        window.addEventListener("lightboxToggle", handleLightboxToggle);
+        return () => window.removeEventListener("lightboxToggle", handleLightboxToggle);
+    }, []);
+
     return (
         <nav
-            className="flex items-center border-2 border-white/30 rounded-3xl fixed w-[97%] px-5 mx-auto
-            top-4 inset-x-0 bg-white/20 backdrop-blur-[10px] justify-between h-15 max-md:text-base z-1">
+            className={`flex items-center border-2 border-white/30 rounded-3xl fixed w-[97%] px-5 mx-auto
+            top-4 inset-x-0 bg-white/10 backdrop-blur-md justify-between h-15 max-md:text-base z-[60]
+            transition-all duration-300
+            ${isHidden ? "-translate-y-32 opacity-0 pointer-events-none" : "translate-y-0 opacity-100"}`}>
             <div
                 className="flex flex-row items-center gap-8">
                 <img
@@ -90,11 +103,12 @@ const MainNav = () => {
                 <NavItems />
             </div>
 
-            <button
+            <a
+                href="#contact"
                 className="hire-me bg-blue-700 hover:bg-blue-900 transition-all duration-200 hover:scale-101 ease-in-out text-white
-                font-bold py-2 w-20 rounded-3xl text-[15px] min-[440px]:w-23 sm:w-30 md:w-40 shadow shadow-white/20 max-[425px]:hidden cursor-pointer">
+                font-bold py-2 w-20 rounded-3xl text-[15px] min-[440px]:w-23 sm:w-30 md:w-40 shadow shadow-white/20 max-[425px]:hidden cursor-pointer text-center">
                 Hire me
-            </button>
+            </a>
 
             <Burger />
 
