@@ -108,7 +108,7 @@ const Counter = ({ end }) => {
                 }
                 return prev + 1;
             });
-        }, 80);
+        }, 150);
         return () => clearInterval(interval);
     }, [end]);
     return <>{count}</>;
