@@ -88,6 +88,7 @@ const Cert = () => {
 
     return (
         <div
+            id="certs"
             data-aos="fade-down"
             className="w-full min-h-screen flex flex-col justify-center px-6 sm:px-10 md:px-12 lg:px-20 py-16 sm:py-20 border-b-4 border-slate-700 border-dashed">
             <p className="text-3xl sm:text-4xl font-bold text-blue-400 mb-3">

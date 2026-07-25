@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import Logo from "../assets/adnan-logo.svg";
 const navLinks = [
-    { title : 'Home' },
     { title : 'About' },
-    { title : 'Skills' }
+    { title : 'Skills' },
+    { title : 'Certificates' },
+    { title : 'Projects' }
 ]
 
 const Burger = () => {
@@ -48,7 +49,8 @@ const Burger = () => {
             ${isOpen ? "opacity-100 scale-100" : "opacity-0 scale-0 pointer-events-none"}`}>
                 {navLinks.map((link, index) => (
                     <a
-                        href={`${link.title === "About" ? "#about" : link.title === "Home" ? "#" : link.title === "Skills" ? "#skills" : ""}`}
+                        href={`${link.title === "About" ? "#about" : link.title === "Skills" ? "#skills" : link.title === "Certificates" ? "#certs" :  link.title === "Projects" ? "#projects" : ""}`}
+                        key = {index}
                         className="burgerbutton py-2 bg-slate-300 active:bg-slate-500 border-black not-last:border-b text-center"
                         key={index}>
                             {link.title}
@@ -66,7 +68,7 @@ const NavItems = () => {
             md:gap-4 sm:text-[16px] sm:gap-3 flex max-[425px]:hidden">
             {navLinks.map((link, index) => (
                 <a
-                    href={`${link.title === "About" ? "#about" : link.title === "Home" ? "#" : link.title === "Skills" ? "#skills" : ""}`}
+                    href={`${link.title === "About" ? "#about" : link.title === "Skills" ? "#skills" : link.title === "Certificates" ? "#certs" :  link.title === "Projects" ? "#projects" : ""}`}
                     key = {index}
                     className={`cursor-pointer hover:text-yellow-300 hover:scale-105 transition-all duration-300 ease-in-out`}>
                         {link.title}
@@ -96,10 +98,12 @@ const MainNav = () => {
             ${isHidden ? "-translate-y-32 opacity-0 pointer-events-none" : "translate-y-0 opacity-100"}`}>
             <div
                 className="flex flex-row items-center gap-8">
-                <img
-                    src={Logo}
-                    alt="Adnan Saker Logo"
-                    className="w-10 h-10" />
+                <a href="#">
+                    <img
+                        src={Logo}
+                        alt="Adnan Saker Logo"
+                        className="w-10 h-10 cursor-pointer" />
+                </a>
                 <NavItems />
             </div>
 
