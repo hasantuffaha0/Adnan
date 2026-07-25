@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
-import Photos from "./components/Photos";
+import Photos from "./components/photos";
 
 function App() {
     return (
