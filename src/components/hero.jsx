@@ -35,7 +35,7 @@ const NameAdnan = () => {
                 Hi, I'm
             </p>
 
-            <h1 className="main-name text-5xl md:text-6xl lg:text-7xl font-black text-orange-400 leading-none">
+            <h1  className="main-name text-5xl md:text-6xl lg:text-7xl font-black text-orange-400 leading-none">
                 Adnan Sakr
             </h1>
 
@@ -124,7 +124,7 @@ const ShowInfo = () => {
                     key={link.title}
                     className="bg-white/10 backdrop-blur-xl border border-white/20 hover:border-orange-400/50
                     transition-all duration-300 rounded-2xl px-5 py-4 sm:px-6 flex flex-col items-center gap-1 min-w-[90px] sm:min-w-[110px]">
-                    <p className="text-orange-400 font-bold text-xl sm:text-2xl">
+                    <p id="numbersfonts" className="text-orange-400 font-bold text-xl sm:text-2xl">
                         +<Counter end={link.number} />
                     </p>
 
@@ -185,11 +185,11 @@ const Hero = () => {
     return (
         <div
             id="home"
-            className="relative flex flex-col md:flex-row items-center justify-between gap-14 md:gap-8
+            className="relative -mt-5 flex flex-col lg:flex-row items-center justify-between gap-14 md:gap-8
             text-center md:text-left px-6 sm:px-10 md:px-12 lg:px-20 py-16 sm:py-20
             border-b-4 border-dashed border-slate-700 min-h-[calc(100vh-95px)] overflow-hidden">
 
-            <div className="order-2 md:order-1 flex flex-col items-center md:items-start relative z-10">
+            <div className="order-2 lg:order-1 flex flex-col items-center md:items-start relative z-10">
                 <StatusBadge />
                 <NameAdnan />
                 <Description />
@@ -197,7 +197,7 @@ const Hero = () => {
                 <ShowInfo />
             </div>
 
-            <div className="order-1 md:order-2 shrink-0 relative z-10">
+            <div className="order-1 lg:order-2 shrink-0 relative z-10">
                 <AdnanPhoto />
             </div>
 

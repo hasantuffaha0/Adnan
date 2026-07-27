@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: "AdnanNameFont";
-    src: url('./Fonts/Caveat/Caveat-VariableFont_wght.ttf') format("Truetype");
+    src: url('./Fonts/Oswald/Oswald-VariableFont_wght.ttf') format("Truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -20,13 +20,42 @@
 
 @font-face {
     font-family: "trackName";
-    src: url('./Fonts/Erica_One/EricaOne-Regular.ttf') format("Truetype");
+    src: url('./Fonts/Share_Tech/ShareTech-Regular.ttf') format("Truetype");
     font-weight: normal;
     font-style: normal;
 }
 
-.adnan-title {
+@font-face {
+    font-family: "projectsfont";
+    src: url('./Fonts/Germania_One/GermaniaOne-Regular.ttf') format("Truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "numbersfont";
+    src: url('./Fonts/static/Orbitron-SemiBold.ttf') format("Truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "numbersfont";
+    src: url('./Fonts/static/Orbitron-SemiBold.ttf') format("Truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+#navfont {
     font-family: "AdnanNameFont", sans-serif;
+}
+
+#numbersfonts {
+    font-family: "numbersfont", sans-serif;
+}
+
+#projectstofont {
+    font-family: "projectsfont", sans-serif;
 }
 
 .burgerbutton:nth-child(1) {

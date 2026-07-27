@@ -38,6 +38,7 @@ const ProjectCard = ({ project, index }) => {
 
     return (
         <Link
+            id="projectstofont"
             to={`/photos/${project.slug}`}
             data-aos="fade-up"
             data-aos-delay={index * 100}
