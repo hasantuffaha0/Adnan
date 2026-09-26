@@ -50,7 +50,6 @@ const Burger = () => {
                 {navLinks.map((link, index) => (
                     <a
                         href={`${link.title === "About" ? "#about" : link.title === "Skills" ? "#skills" : link.title === "Certificates" ? "#certs" :  link.title === "Projects" ? "#projects" : ""}`}
-                        key = {index}
                         className="burgerbutton py-2 bg-slate-300 active:bg-slate-500 border-black not-last:border-b text-center"
                         key={index}>
                             {link.title}

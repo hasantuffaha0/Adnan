@@ -2,7 +2,7 @@ const socialLinks = [
     {
         title: "LinkedIn",
         value: "adnan-sakr",
-        href: "https://www.linkedin.com/in/adnan-sakr-6a8630391",
+        href: "www.linkedin.com/in/adnan-sakr",
         color: "hover:border-blue-500/50 hover:bg-blue-500/10",
         iconColor: "text-blue-500",
         icon: (
@@ -14,7 +14,7 @@ const socialLinks = [
     {
         title: "GitHub",
         value: "adnansakr593-beep",
-        href: "https://github.com/adnansakr593-beep",
+        href: "https://github.com/adnanSakr11",
         color: "hover:border-slate-300/50 hover:bg-slate-300/10",
         iconColor: "text-slate-200",
         icon: (
