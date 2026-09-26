@@ -13,7 +13,7 @@ const socialLinks = [
     },
     {
         title: "GitHub",
-        value: "adnansakr593-beep",
+        value: "adnanSakr11",
         href: "https://github.com/adnanSakr11",
         color: "hover:border-slate-300/50 hover:bg-slate-300/10",
         iconColor: "text-slate-200",
